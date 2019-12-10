@@ -1,7 +1,7 @@
-Magento 2 Theme Boilerplate
-===========================
+Magento 2 Module Boilerplate
+============================
 
-A boilerplate for a basic Magento 2 theme development.
+A boilerplate for all modules default fallbacks and resource sharing across resources.
 
 
 Facts
@@ -14,9 +14,8 @@ Facts
 Description
 -----------
 
-A very entrance level Magento 2 theme for using as a boilerplate setup when developing. This includes 
-all the default files needed for registering the theme as well as a few components for understanding 
-the overall Magento 2 theme structure.
+A basic, introductory level module for providing default configs for modules provides
+the resources for various modules across the same namespace or developer.
 
 
 Requirements
@@ -24,20 +23,18 @@ Requirements
 
  * [https://magento.com/products/open-source](Magento)
  * [http://git-scm.com](Git)
- 
+
 
 Developer
 ---------
 
 **Rye Miller**
 
- * [http://ryemiller.com](http://ryemiller.com/)
- * [http://drkstr.io](http://drkstr.io/)
- * [BitBucket](http://bitbucket.org/adarkstar/)
  * [GitHub](http://github.com/iods/)
  * [@ryemiller](https://twitter.com/ryemiller)
- 
- 
+ * [Email](millerrye17@gmail.com)
+
+
 Support
 -------
 
@@ -47,10 +44,10 @@ If you have any issues with this application, open an issue on [Github](https://
 Contribution
 ------------
 
-For instructions and/or guidelines on contributing check the [CONTRIBUTING.md](https://github.com/iods/mage2-boilerplate/CONTRIBUTING.md) 
+For instructions and/or guidelines on contributing check the [CONTRIBUTING.md](https://github.com/iods/mage2-boilerplate/CONTRIBUTING.md)
 file. Any contribution is highly appreciated. The best way to contribute code is to contact the [developer](#Developer).
- 
- 
+
+
 Versioning
 ----------
 
@@ -73,4 +70,4 @@ Code released under [the MIT license](https://github.com/iods/mage2-boilerplate/
 Copyright
 ---------
 
-(c) 2017 Rye Miller
+(c) 2019 Rye Miller
