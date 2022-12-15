@@ -12,6 +12,14 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <!--
+    /*
+     * Configurable and Simple Product Management.
+     */
+    -->
+    <preference for="Iods\Connect\Api\Data\Product\OptionValueInterface"
+                type="Iods\Connect\Model\Data\ProductOptionValue" />
+
     <preference for="Iods\Connect\Api\ConfigurableManagementInterface"
                 type="Iods\Connect\Model\ConfigurableManagement" />
 </config>
