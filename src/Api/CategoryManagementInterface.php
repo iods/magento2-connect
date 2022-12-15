@@ -9,4 +9,13 @@
  */
 declare(strict_types=1);
 
-namespace Iods\Api;
+namespace Iods\Connect\Api;
+
+interface CategoryManagementInterface
+{
+    /**
+     * Method for a GET request with the Categories API.
+     * @return mixed
+     */
+    public function getCategories(): mixed;
+}

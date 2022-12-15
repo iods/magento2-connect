@@ -8,3 +8,37 @@
  * @license   See LICENSE for license details.
  */
 declare(strict_types=1);
+
+namespace Iods\Connect\Api;
+
+use Magento\Catalog\Api\Data\ProductInterface;
+use Magento\Framework\Api\SearchCriteriaInterface;
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\Exception\NoSuchEntityException;
+
+/**
+ * Interface ConfigurableManagementInterface
+ */
+interface ConfigurableProductServiceInterface
+{
+    /**
+     * @param SearchCriteriaInterface $criteria
+     * @return mixed
+     */
+    public function getConfigurableProductList(SearchCriteriaInterface $criteria);
+    /**
+     * Returns the parent product by the child products ID.
+     * @param  int $id
+     * @return ProductInterface[]
+     * @throws LocalizedException
+     */
+    public function getParentByChildId(int $id): array;
+
+    /**
+     * Returns the parent product by child API, using SKU.
+     * @param  string $sku
+     * @return ProductInterface[]
+     * @throws NoSuchEntityException
+     */
+    public function getParentByChildSku(string $sku): array;
+}
