@@ -11,9 +11,14 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-use Iods\Base\Api\BaseApiInterface;
+use Iods\Connect\Api\Data\Product\OptionInterface;
 
-interface DefaultServiceInterface extends BaseApiInterface
+interface ProductServiceInterface
 {
-
+    /**
+     * @param string $sku
+     * @return OptionInterface[]
+     */
+    public function getProductOptions(string $sku): array;
 }
+

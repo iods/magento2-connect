@@ -9,11 +9,14 @@
  */
 declare(strict_types=1);
 
-namespace Iods\Connect\Api;
+namespace Iods\Connect\Api\Data\Customer;
 
-use Iods\Base\Api\BaseApiInterface;
-
-interface DefaultServiceInterface extends BaseApiInterface
+interface GroupInterface
 {
-
+    /**
+     * @param string $cart_id
+     * @param string $customer_group_id
+     * @return GroupInterface
+     */
+    public function setGroup(string $cart_id, string $customer_group_id): GroupInterface;
 }

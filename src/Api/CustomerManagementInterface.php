@@ -10,3 +10,16 @@
 declare(strict_types=1);
 
 namespace Iods\Api;
+
+use Magento\Framework\Api\SearchCriteriaInterface;
+use Magento\Sales\Api\Data\OrderInterface;
+
+interface CustomerManagementInterface
+{
+    /**
+     * @param $customer_id
+     * @param SearchCriteriaInterface $criteria
+     * @return OrderInterface[]
+     */
+    public function getOrderList($customer_id, SearchCriteriaInterface $criteria): array;
+}

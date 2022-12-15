@@ -8,3 +8,12 @@
  * @license   See LICENSE for license details.
  */
 declare(strict_types=1);
+
+namespace Iods\Connect\Api;
+
+interface ProductInterface extends DefaultServiceInterface
+{
+    // public function create()
+
+    // public function setAttributes()
+}
