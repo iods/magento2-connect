@@ -15,7 +15,7 @@ use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Framework\Api\AttributeInterface;
 use Magento\Framework\Api\ExtensibleDataInterface;
 
-interface ConfigurationsInterface extends ExtensibleDataInterface
+interface ConfigurableInterface extends ExtensibleDataInterface
 {
     /**
      * @return int
@@ -34,7 +34,7 @@ interface ConfigurationsInterface extends ExtensibleDataInterface
 
     /**
      * @param ProductInterface $product
-     * @return ConfigurationsInterface
+     * @return ConfigurableInterface
      */
-    public function load(ProductInterface $product): ConfigurationsInterface;
+    public function load(ProductInterface $product): ConfigurableInterface;
 }
