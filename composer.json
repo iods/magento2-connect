@@ -1,0 +1,46 @@
+{
+  "name": "iods/module-connect",
+  "description": "Special handling of different core APIs for testing services in Magento 2.",
+  "type": "magento2-module",
+  "version": "0.1.1",
+  "license": [
+    "MIT"
+  ],
+  "authors": [
+    {
+      "name": "Rye Miller",
+      "email": "millerrye17@gmail.com",
+      "homepage": "http://github.com/iods",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "repositories": {
+    "magento": {
+      "type": "composer",
+      "url": "https://repo.magento.com/"
+    }
+  },
+  "require": {
+    "php": "~7.0|~7.1|~7.3|~7.4|~8.1",
+    "magento/framework": "*",
+    "iods/module-base": "*",
+    "iods/module-baseui": "*",
+    "iods/module-sysconfig": "*"
+  },
+  "prefer-stable": true,
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Iods\\Connect\\": "src"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "magento/composer-dependency-version-audit-plugin": true,
+      "magento/magento-composer-installer": false
+    }
+  }
+}

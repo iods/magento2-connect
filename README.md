@@ -1,76 +1,86 @@
-Magento 2 Theme Boilerplate
-===========================
+Magento 2 Connect
+=================
 
-A boilerplate for a basic Magento 2 theme development.
+The `Iods_Connect` module groups the special handling of different core APIs for testing services across Magento 2.
+
+Functionality provided by this module includes:
+ * Getting parent products (configurable) based on the child
+
+**This is a private module and is not currently maintained for public use.**
 
 
 Facts
 -----
 
- * Version: 0.1.0 (Development)
- * [Repository on Github](https://github.com/iods/mage2-boilerplate)
+ * Version: 0.1.1 (Development)
+ * [Repository on Github](https://github.com/iods/magento2-connect)
 
 
-Description
------------
-
-A very entrance level Magento 2 theme for using as a boilerplate setup when developing. This includes 
-all the default files needed for registering the theme as well as a few components for understanding 
-the overall Magento 2 theme structure.
-
-
-Requirements
-------------
+### Requirements
 
  * [https://magento.com/products/open-source](Magento)
  * [http://git-scm.com](Git)
- 
+
+
+Getting Started
+---------------
+
+### Usage Instructions
+
+### Known Issues
+
+### Related Tasks or Discussions
+
+### Installation
+
+```shell
+$ mkdir
+```
+
+### Uninstallation
+
+```shell
+$ rmdir
+```
+
+
+Development
+-----------
+
+### Approach
+
+Understanding the API.
+
+Getting parent products
+
+/V1/products/get-parent-by-id/:id
+/V1/products/get-parent-by-sku/:sku
+
+
+
+
 
 Developer
 ---------
 
 **Rye Miller**
 
- * [http://ryemiller.com](http://ryemiller.com/)
- * [http://drkstr.io](http://drkstr.io/)
- * [BitBucket](http://bitbucket.org/adarkstar/)
+ * [http://ryemiller.io](http://ryemiller.io/)
  * [GitHub](http://github.com/iods/)
  * [@ryemiller](https://twitter.com/ryemiller)
+
  
- 
-Support
--------
-
-If you have any issues with this application, open an issue on [Github](https://github.com/iods/mage2-boilerplate/issues)
-
-
-Contribution
-------------
-
-For instructions and/or guidelines on contributing check the [CONTRIBUTING.md](https://github.com/iods/mage2-boilerplate/CONTRIBUTING.md) 
-file. Any contribution is highly appreciated. The best way to contribute code is to contact the [developer](#Developer).
- 
- 
-Versioning
-----------
-
-For transparency into the release cycle and in striving to maintain backward compatibility, this project is
-maintained under [the Semantic Versioning guidelines](http://semver.org/).
-
-
-Acknowledgements
-----------------
-
-Thank you to [Atlassian](http://www.atlassian.com) for being such an honest and innovative company.
+Further Reading
+---------------
 
 
 License
 -------
 
-Code released under [the MIT license](https://github.com/iods/mage2-boilerplate/LICENSE).
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) This project/code is released under [the MIT license](https://github.com/iods/magento2-connect/LICENSE).
 
 
 Copyright
 ---------
 
-(c) 2017 Rye Miller
+(c) 2017-Present Rye Miller

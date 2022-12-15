@@ -126,3 +126,10 @@ Icon
 *.cdr
 
 # ---------  Additional .ignores  ---------- #
+
+
+composer.lock
+
+# ---------  Additional .ignores  ---------- #
+
+/.vendors/

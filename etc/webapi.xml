@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Special handling of different core APIs for testing services in Magento 2.
+ *
+ * @package   Iods\Connect
+ * @author    Rye Miller <rye@drkstr.dev>
+ * @copyright Copyright (c) 2022, Rye Miller (https://ryemiller.io)
+ * @license   See LICENSE for license details.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route method="GET" url="/V1/products/get-parent-by-id/:id">
+        <service class="Iods\Connect\Api\ConfigurableManagementInterface"
+                 method="getParentByChildId"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/products/get-parent-by-sku/:sku">
+        <service class="Iods\Connect\Api\ConfigurableManagementInterface"
+                 method="getParentByChildSku"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
