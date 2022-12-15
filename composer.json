@@ -9,9 +9,8 @@
   "authors": [
     {
       "name": "Rye Miller",
-      "email": "millerrye17@gmail.com",
-      "homepage": "http://github.com/iods",
-      "role": "Developer"
+      "email": "rye@drkstr.dev",
+      "homepage": "https://ryemiller.io",
     }
   ],
   "minimum-stability": "dev",
@@ -22,7 +21,7 @@
     }
   },
   "require": {
-    "php": "~7.0|~7.1|~7.3|~7.4|~8.1",
+    "php": "~7.0|~7.1|~7.3|~7.4|~8.0|~8.1",
     "magento/framework": "*",
     "iods/module-base": "*",
     "iods/module-baseui": "*",
