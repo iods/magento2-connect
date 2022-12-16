@@ -87,26 +87,19 @@ class InstallSchema implements InstallSchemaInterface
             'login_date',
             Table::TYPE_TIMESTAMP,
             null,
-            [
-                'nullable' => false,
-                'default' => Table::TIMESTAMP_INIT,
-            ],
+            ['nullable' => false, 'default' => Table::TIMESTAMP_INIT,],
             'Login date'
         )->addColumn(
             'expire_date',
             Table::TYPE_TIMESTAMP,
             null,
-            [
-                'nullable' => false,
-                'default' => Table::TIMESTAMP_INIT
-            ],
+            ['nullable' => false, 'default' => Table::TIMESTAMP_INIT],
             'Expire date'
         )->setComment(
             'Used to store ioDS API tokens for different API calls and services'
         )->setOption('charset', 'utf8');
 
         $installer->getConnection()->createTable($table);
-
         $installer->endSetup();
     }
 }
