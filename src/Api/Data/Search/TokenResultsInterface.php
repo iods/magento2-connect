@@ -9,15 +9,20 @@
  */
 declare(strict_types=1);
 
-namespace Iods\Connect\Api;
+namespace Iods\Connect\Api\Data\Search;
 
-interface CategoryManagementInterface
+use Iods\Connect\Api\TokenInterface;
+
+interface TokenResultsInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    /**
+     * @return TokenInterface[]
+     */
+    public function getItems(): array;
 
     /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
+     * @param TokenInterface[] $items
+     * @return $this
      */
-    public function getCategories(): mixed;
+    public function setItems(array $items): self;
 }

@@ -11,13 +11,18 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+use Iods\Connect\Api\Data\TaxRateInterface;
+
+interface TaxClassManagementInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    /**
+     * @return TaxRateInterface[]
+     */
+    public function getAvailableRates(): array;
 
     /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
+     * @param string $customer_id
+     * @return TaxRateInterface[]
      */
-    public function getCategories(): mixed;
+    public function getAvailableRatesByCustomer(string $customer_id): array;
 }

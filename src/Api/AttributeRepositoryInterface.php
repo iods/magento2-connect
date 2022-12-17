@@ -11,13 +11,24 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+use Magento\Framework\Controller\Result\Json;
+
+/**
+ * Interface AttributeRepositoryInterface
+ * @package Iods\Connect\Api
+ */
+interface AttributeRepositoryInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    const PER_PAGE = 500;
 
     /**
-     * Method for a GET request with the Categories API.
      * @return mixed
      */
-    public function getCategories(): mixed;
+    public function getAttributes(): mixed;
+
+    /**
+     * @param string|null $attribute_id
+     * @return Json
+     */
+    public function save(string $attribute_id = null): Json;
 }

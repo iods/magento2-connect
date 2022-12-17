@@ -9,15 +9,13 @@
  */
 declare(strict_types=1);
 
-namespace Iods\Connect\Api;
+namespace Iods\Connect\Api\Data;
 
-interface CategoryManagementInterface
+interface ConfigInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
-
-    /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
-     */
-    public function getCategories(): mixed;
+    public const ID = 'option_id';
+    public const COMPANY_ID = 'company_id';
+    public const STORE_ID = 'store_id';
+    public const LABEL = 'label';
+    public const VALUE = 'value';
 }

@@ -11,13 +11,18 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+interface OrderManagementInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    const PER_PAGE = 500;
 
     /**
-     * Method for a GET request with the Categories API.
      * @return mixed
      */
-    public function getCategories(): mixed;
+    public function getOrders(): mixed;
+
+    /**
+     * @param string $order_id
+     * @return mixed
+     */
+    public function updateOrder(string $order_id): mixed;
 }

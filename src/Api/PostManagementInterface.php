@@ -11,13 +11,19 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+/**
+ * Interface PostManagementInterface
+ * @package Iods\Connect\Api
+ *
+ * @api
+ */
+interface PostManagementInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
-
     /**
-     * Method for a GET request with the Categories API.
+     * Creates a new customer address.
+     * @param string $customer_id
+     * @param mixed $address
      * @return mixed
      */
-    public function getCategories(): mixed;
+    public function createAddress(string $customer_id, mixed $address): mixed;
 }

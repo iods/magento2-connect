@@ -11,13 +11,13 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
-{
-    public function getList(array $values, string $field = 'entity_id');
+use Iods\Connect\Api\Data\PageInterface;
 
+interface PageManagementInterface
+{
     /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
+     * @param string $url
+     * @return PageInterface
      */
-    public function getCategories(): mixed;
+    public function getByUrlKey(string $url): PageInterface;
 }

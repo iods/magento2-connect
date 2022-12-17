@@ -11,13 +11,14 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
-{
-    public function getList(array $values, string $field = 'entity_id');
+use Iods\Connect\Api\Data\Search\DataInterface;
 
+interface SearchManagementInterface
+{
     /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
+     *
+     * @param $parent_category
+     * @return Data\Search\DataInterface
      */
-    public function getCategories(): mixed;
+    public function getSearchData($parent_category = null): Data\Search\DataInterface;
 }

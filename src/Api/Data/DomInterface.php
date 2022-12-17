@@ -9,15 +9,11 @@
  */
 declare(strict_types=1);
 
-namespace Iods\Connect\Api;
+namespace Iods\Connect\Api\Data;
 
-interface CategoryManagementInterface
+interface DomInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    public function updateHtmlAttribute($attribute, $value, array $xpath = []);
 
-    /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
-     */
-    public function getCategories(): mixed;
+    public function updateHtmlElement($node, $key = null, $value = null, $text = null, array $xpath = []);
 }

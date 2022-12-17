@@ -11,13 +11,7 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+interface SessionManagementInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
-
-    /**
-     * Method for a GET request with the Categories API.
-     * @return mixed
-     */
-    public function getCategories(): mixed;
+    public function isValidAuthorizationCode(string $code): mixed;
 }

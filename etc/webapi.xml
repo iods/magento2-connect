@@ -12,18 +12,145 @@
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
 
-    <route method="GET" url="/V1/products/get-parent-by-id/:id">
+    <!--
+    /*
+     * Products API
+     * /V1/products/
+     */
+    -->
+    <route url="/V1/products/search/parent/:child_id" method="GET">
         <service class="Iods\Connect\Api\ConfigurableManagementInterface"
                  method="getParentByChildId"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>
     </route>
-    <route method="GET" url="/V1/products/get-parent-by-sku/:sku">
+    <route url="/V1/products/search/:child_sku" method="GET">
         <service class="Iods\Connect\Api\ConfigurableManagementInterface"
                  method="getParentByChildSku"/>
         <resources>
             <resource ref="anonymous"/>
         </resources>
     </route>
+    <route url="/V1/products/product_import" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/import" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/:sku/product_links" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/:sku/product_options" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/most_viewed/:period" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/new" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/best_seller/:period" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/products/top_rated/:filter" method="POST">
+
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <!--
+    /*
+     * Category API
+     * /V1/categories/
+     */
+    -->
+
+    <!--
+    /*
+     * Attributes API
+     * /V1/product_options/
+     */
+    -->
+
+    <!--
+    /*
+     * Customer API
+     * /V1/customers/
+     */
+    -->
+
+    <!--
+    /*
+     * Fulfillment API
+     * /V1/customers/
+     */
+    -->
+
+    <!--
+    /*
+     * GeoIP [Tulip] API
+     * /V1/customers/
+     */
+    -->
+
+    <!--
+    /*
+     * Wishlist API
+     * /V1/customers/
+     */
+    -->
+
+    <!--
+    /*
+     * Newsletter API
+     * /V1/newsletter/
+     */
+    -->
+
+    <!--
+    /*
+     * Mailing API
+     * /V1/customers/
+     */
+    -->
+
+    <!--
+    /*
+     * Admin API
+     * /V1/admin/<action>/:param
+     */
+    -->
+    <route url="/V1/admin/" method="POST">
+
+    </route>
+
+    <!--
+    /*
+     * Contacts API
+     * /V1/customers/
+     */
+    -->
 </routes>

@@ -11,13 +11,22 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
-interface CategoryManagementInterface
+/**
+ * Interface CategoryRepositoryInterface
+ * @package Iods\Connect\Api
+ */
+interface CategoryRepositoryInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    const PER_PAGE = 500;
 
     /**
-     * Method for a GET request with the Categories API.
      * @return mixed
      */
     public function getCategories(): mixed;
+
+    /**
+     * @param string|null $category_id
+     * @return mixed
+     */
+    public function save(string $category_id = null): mixed;
 }
