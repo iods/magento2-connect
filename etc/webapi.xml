@@ -153,4 +153,10 @@
      * /V1/customers/
      */
     -->
+    <route url="/V1/contacts/submit" method="POST">
+        <service class="Iods\Connect\Api\ContactRepositoryInterface" method="save" />
+        <resources>
+            <resource ref="self" />
+        </resources>
+    </route>
 </routes>

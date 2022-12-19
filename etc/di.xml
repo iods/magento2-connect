@@ -22,4 +22,18 @@
 
     <preference for="Iods\Connect\Api\ConfigurableManagementInterface"
                 type="Iods\Connect\Model\ConfigurableManagement" />
+
+    <!--
+        /* Contacts API */
+    -->
+    <preference for="Iods\Connect\Api\Data\ContactInterface"
+                type="Iods\Connect\Model\Contact" />
+
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="Iods\Connect\Api\Data\ContactInterface" xsi:type="string">Iods\Connect\Api\ContactRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
