@@ -14,8 +14,9 @@ namespace Iods\Connect\Api\Data\Category;
 /**
  * Interface ItemsInterface
  * @package Iods\Connect\Api\Data\Category
+ * @api
  */
-interface ItemsInterface
+interface ResultInterface
 {
     /**
      * @return ItemInterface[]
@@ -24,7 +25,7 @@ interface ItemsInterface
 
     /**
      * @param ItemInterface[] $items
-     * @return $this
+     * @return $this|void
      */
-    public function setItems(array $items): self;
+    public function setItems(array $items);
 }

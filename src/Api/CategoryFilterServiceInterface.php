@@ -11,12 +11,20 @@ declare(strict_types=1);
 
 namespace Iods\Connect\Api;
 
+use Iods\Connect\Api\Data\Category\FilterInterface;
+use Magento\Framework\Exception\LocalizedException;
+
 /**
- * Interface CategoryRepositoryInterface
+ * Interface CategoryFilterServiceInterface
  * @package Iods\Connect\Api
  * @api
  */
-interface CategoryRepositoryInterface
+interface CategoryFilterServiceInterface
 {
-
+    /**
+     * @param int $cat_id
+     * @return FilterInterface[]
+     * @throws LocalizedException
+     */
+    public function getCategoryFilters(int $cat_id): array;
 }

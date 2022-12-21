@@ -16,8 +16,8 @@ use Magento\Framework\Api\Search\SearchCriteriaInterface;
 
 /**
  * Interface ProductRepositoryInterface
- * The interface between product management and Models.
  * @package Iods\Connect\Api
+ * @api
  */
 interface ProductRepositoryInterface
 {

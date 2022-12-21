@@ -14,7 +14,12 @@ namespace Iods\Connect\Api\Data\Category;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Framework\Api\CustomAttributesDataInterface;
 
-interface ItemInterface extends  CustomAttributesDataInterface
+/**
+ * Interface ItemInterface
+ * @package Iods\Connect\Api\Data\Category
+ * @api
+ */
+interface ItemInterface extends CustomAttributesDataInterface
 {
     /**
      * @return int
@@ -27,9 +32,9 @@ interface ItemInterface extends  CustomAttributesDataInterface
     public function getName(): string;
 
     /**
-     * @return ProductInterface[]
+     * @return ProductInterface
      */
-    public function getFeaturedProducts(): array;
+    public function getFeaturedProduct(): ProductInterface;
 
     /**
      * @return ItemInterface[]
@@ -38,25 +43,25 @@ interface ItemInterface extends  CustomAttributesDataInterface
 
     /**
      * @param int $id
-     * @return $this
+     * @return $this|void
      */
-    public function setId(int $id): self;
+    public function setId(int $id);
 
     /**
      * @param string $name
-     * @return string
+     * @return $this|void
      */
-    public function setName(string $name): string;
+    public function setName(string $name);
 
     /**
-     * @param ProductInterface[] $products
-     * @return $this
+     * @param ProductInterface $product
+     * @return $this|void
      */
-    public function setFeaturedProducts(array $products): self;
+    public function setFeaturedProduct(ProductInterface $product);
 
     /**
      * @param ItemInterface[] $items
-     * @return $this
+     * @return $this|void
      */
-    public function setCategoryChildren(array $items): self;
+    public function setCategoryChildren(array $items);
 }

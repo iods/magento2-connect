@@ -13,11 +13,24 @@ namespace Iods\Connect\Api;
 
 interface CategoryManagementInterface
 {
-    public function getList(array $values, string $field = 'entity_id');
+    const PER_PAGE = 500;
+
+    /**
+     * @param array $values
+     * @param string $field
+     * @return mixed
+     */
+    public function getList(array $values, string $field = 'entity_id'): mixed;
 
     /**
      * Method for a GET request with the Categories API.
      * @return mixed
      */
     public function getCategories(): mixed;
+
+    /**
+     * @param string|null $category_id
+     * @return mixed
+     */
+    public function save(string $category_id = null): mixed;
 }
