@@ -103,6 +103,9 @@ class CategoryManagement implements CategoryManagementInterface
         $category->setStoreId(Store::DEFAULT_STORE_ID);
         $category->setUrlKey($category->formatUrlKey($data['name']));
 
+        // set for event
+        $category->setData('iods_requires_token', false);
+
         $this->_category_repository->save($category);
 
         return [[
